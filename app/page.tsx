@@ -1,65 +1,317 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import JsonLd from "./components/JsonLd";
+import Faq from "./components/Faq";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://modly3d.example.com";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const appLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Modly3D",
+  applicationCategory: "MultimediaApplication",
+  operatingSystem: "Windows, Linux, macOS",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description:
+    "Modly3D is a free local AI 3D model generator that turns images or text into 3D meshes offline with unlimited generations and low hardware requirements.",
+  url: siteUrl,
+  image: `${siteUrl}/images/hero.png`,
+};
+
+const values = [
+  {
+    title: "100% Free Forever",
+    body: "No subscriptions, no per-image credits, no hidden limits. Cloud services charge $20–$60/month — Modly3D is free and always will be.",
+  },
+  {
+    title: "Local & Private",
+    body: "Everything runs on your PC. Your images and prompts never leave your device. A true 3d model local generator with zero uploads.",
+  },
+  {
+    title: "Unlimited Generations",
+    body: "Generate as many 3D models as you want. No queues, no rate limits, no credits to top up.",
+  },
+  {
+    title: "Low Hardware Requirements",
+    body: "Optimized to run on everyday laptops. No expensive GPU farm, no data center — just your machine.",
+  },
+];
+
+const spotlights = [
+  {
+    img: "/images/feature-local.png",
+    alt: "Modly3D generating a 3D mesh on an everyday laptop",
+    title: "Runs on your PC",
+    body: "Local AI inference means no cloud, no queues. Your hardware does the work, so generation is fast and free.",
+  },
+  {
+    img: "/images/feature-privacy.png",
+    alt: "A laptop protected by a privacy shield, no data uploaded",
+    title: "Your data stays private",
+    body: "Nothing is uploaded, ever. Unlike cloud services, Modly3D runs entirely offline — your photos never touch a server.",
+  },
+  {
+    img: "/images/feature-export.png",
+    alt: "A 3D model exporting into multiple file formats",
+    title: "Export everywhere",
+    body: "Export as GLB, OBJ, STL, or PLY — compatible with Blender, Unity, Unreal, Godot, and most 3D printers.",
+  },
+];
+
+const steps = [
+  {
+    n: "01",
+    title: "Import an image or prompt",
+    body: "Drop in a photo of an object, character, or concept — or just describe it with a text prompt. A clean input gives the best results.",
+  },
+  {
+    n: "02",
+    title: "Pick a local model",
+    body: "Choose a built-in model tuned for speed or fidelity. All models run locally and are optimized for low hardware.",
+  },
+  {
+    n: "03",
+    title: "Generate & export",
+    body: "Modly3D produces a textured mesh on your PC. Preview it, then export to your favorite tools.",
+  },
+];
+
+const formats = ["GLB", "OBJ", "STL", "PLY"];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <JsonLd data={appLd} />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
+          <div>
+            <div className="mb-5 flex flex-wrap gap-2">
+              {["100% Free", "Unlimited", "Offline", "Low Hardware"].map((b) => (
+                <span
+                  key={b}
+                  className="rounded-full bg-sun/20 px-3 py-1 text-xs font-semibold text-brand-600"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+              Free Local 3D Model Generator —{" "}
+              <span className="text-gradient">Unlimited, Offline, Low Hardware</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-lg text-ink/70">
+              Modly3D turns any image or text prompt into a detailed 3D mesh
+              right on your computer. No cloud, no credits, no expensive GPU.
+              100% free and unlimited.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/#download"
+                className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
+              >
+                Download Free
+              </Link>
+              <Link
+                href="/how-it-works"
+                className="rounded-full border border-cloud bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+              >
+                See how it works
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-ink/50">
+              No account. No credit card. Runs on your PC.
+            </p>
+          </div>
+          <div className="relative">
+            <img
+              src="/images/hero.png"
+              alt="Modly3D generating a 3D model from a photo on a laptop"
+              className="w-full rounded-3xl shadow-xl ring-1 ring-cloud"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Value props */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          Why creators choose Modly3D
+        </h2>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((v) => (
+            <div
+              key={v.title}
+              className="rounded-2xl border border-cloud bg-white/70 p-6 shadow-sm"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <h3 className="text-lg font-semibold text-brand-600">{v.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">{v.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Feature spotlights */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          Everything you need for local AI 3D generation
+        </h2>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {spotlights.map((s) => (
+            <article
+              key={s.title}
+              className="overflow-hidden rounded-2xl border border-cloud bg-white/70 shadow-sm"
             >
-              Learning
-            </a>{" "}
-            center.
+              <img src={s.img} alt={s.alt} className="aspect-[4/3] w-full object-cover" />
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-ink">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/70">{s.body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="mt-6 text-center text-sm text-ink/60">
+          Plus image-to-3D, text-to-3D, collections &amp; workspace, and an
+          open model marketplace. <Link href="/features" className="font-semibold text-brand hover:underline">See all features →</Link>
+        </p>
+      </section>
+
+      {/* How it works */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          From image or prompt to mesh in three steps
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {steps.map((s) => (
+            <div key={s.n} className="rounded-2xl border border-cloud bg-white/70 p-6">
+              <div className="text-3xl font-extrabold text-sun">{s.n}</div>
+              <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Export formats */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <div className="rounded-3xl border border-cloud bg-cloud/40 p-8 text-center">
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            Multiple export formats
+          </h2>
+          <p className="mt-3 text-ink/70">
+            Ready for any 3D tool or game engine, straight out of the box.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {formats.map((f) => (
+              <span
+                key={f}
+                className="rounded-xl bg-white px-5 py-3 text-sm font-bold text-teal-600 shadow-sm ring-1 ring-cloud"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Marketplace teaser */}
+      <section id="extensions" className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid items-center gap-8 rounded-3xl border border-cloud bg-white/70 p-8 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+              A growing model marketplace
+            </h2>
+            <p className="mt-3 text-ink/70">
+              Install community and official models in one click. Swap the model,
+              modify the pipeline, and extend Modly3D with your own tools — no
+              black boxes.
+            </p>
+            <Link
+              href="/features"
+              className="mt-5 inline-block rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
+            >
+              Explore models
+            </Link>
+          </div>
+          <ul className="space-y-3 text-sm text-ink/70">
+            {[
+              "One-click model installation",
+              "Open weights, fully hackable",
+              "Community-contributed pipelines",
+              "Plugin-ready architecture",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-2">
+                <span className="mt-1 text-teal-600">✓</span>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Roadmap teaser */}
+      <section id="roadmap" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          What&apos;s coming next
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            "Natural-language mesh editing",
+            "Smarter AI copilot",
+            "Extensible editor & plugins",
+            "Visual diagnostics",
+            "Generation provenance",
+            "Real-world scale & measurement",
+          ].map((r) => (
+            <div key={r} className="rounded-2xl border border-dashed border-cloud bg-white/50 p-5 text-sm text-ink/70">
+              {r}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          Frequently asked questions
+        </h2>
+        <div className="mt-8">
+          <Faq limit={4} />
+        </div>
+        <p className="mt-4 text-center text-sm text-ink/60">
+          More questions? <Link href="/faq" className="font-semibold text-brand hover:underline">Read the full FAQ →</Link>
+        </p>
+      </section>
+
+      {/* Download */}
+      <section id="download" className="mx-auto max-w-6xl px-4 py-12">
+        <div className="rounded-3xl bg-gradient-to-br from-brand to-sun p-10 text-center text-white shadow-lg">
+          <h2 className="text-3xl font-extrabold">Download Modly3D — 100% Free</h2>
+          <p className="mt-3 text-white/90">
+            Local, unlimited, offline 3D generation. Pick your platform and start
+            creating.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {["Windows", "Linux", "macOS"].map((p) => (
+              <a
+                key={p}
+                href="#"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-600 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                Download for {p}
+              </a>
+            ))}
+          </div>
+          <p className="mt-4 text-xs text-white/80">
+            Free and open. No account required.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
