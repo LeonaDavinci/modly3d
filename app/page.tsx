@@ -50,13 +50,13 @@ const spotlights = [
   },
   {
     img: "/images/feature-privacy.png",
-    alt: "A laptop protected by a privacy shield, no data uploaded",
+    alt: "Modly3D keeps your data private: a laptop protected by a privacy shield, no data uploaded",
     title: "Your data stays private",
     body: "Nothing is uploaded, ever. Unlike cloud services, Modly3D runs entirely offline — your photos never touch a server.",
   },
   {
     img: "/images/feature-export.png",
-    alt: "A 3D model exporting into multiple file formats",
+    alt: "Modly3D exports a 3D model into multiple file formats (GLB, OBJ, STL, PLY)",
     title: "Export everywhere",
     body: "Export as GLB, OBJ, STL, or PLY — compatible with Blender, Unity, Unreal, Godot, and most 3D printers.",
   },
@@ -133,6 +133,7 @@ export default function Home() {
             <img
               src="/images/demo-hero.png"
               alt="Modly3D generating a 3D model from a photo on a laptop"
+              title="Modly3D — free local AI 3D model generator for unlimited offline generation"
               className="w-full rounded-3xl shadow-xl ring-1 ring-cloud"
             />
           </div>
@@ -197,6 +198,7 @@ export default function Home() {
             <img
               src="/images/demo-pet-dog.png"
               alt="A game pet dog photo turned into a 3D wireframe mesh with white edges in Modly3D"
+              title="Modly3D: turn a game pet dog image into a 3D wireframe mesh"
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">
@@ -211,6 +213,7 @@ export default function Home() {
             <img
               src="/images/hero.png"
               alt="A game hero character reference turned into a 3D wireframe mesh with white edges in Modly3D"
+              title="Modly3D: turn a game hero reference into a 3D wireframe mesh"
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">
@@ -225,6 +228,7 @@ export default function Home() {
             <img
               src="/images/demo-sword.png"
               alt="A fantasy game sword asset turned into a 3D wireframe mesh with white edges in Modly3D"
+              title="Modly3D: turn a fantasy game sword into a 3D wireframe mesh"
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">

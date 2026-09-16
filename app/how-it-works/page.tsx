@@ -21,14 +21,14 @@ const steps = [
     title: "Pick a local model",
     body: "Choose a built-in model tuned for speed or fidelity. Every model runs locally and is optimized for low hardware.",
     img: "/images/feature-privacy.png",
-    alt: "Selecting a local model that runs on your PC",
+    alt: "Selecting a local Modly3D model that runs on your PC",
   },
   {
     n: "03",
     title: "Generate & export",
     body: "Modly3D produces a textured mesh on your PC. Preview it in the built-in viewer, then export as GLB, OBJ, STL, or PLY.",
     img: "/images/feature-export.png",
-    alt: "Generating and exporting a 3D model",
+    alt: "Modly3D generating and exporting a 3D model",
   },
 ];
 
