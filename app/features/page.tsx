@@ -45,6 +45,12 @@ const features = [
     img: "/images/feature-privacy.png",
     alt: "Your generations kept private and organized on your device",
   },
+  {
+    title: "Open source & hackable",
+    body: "Modly3D is an open-source 3D AI with open weights and a plugin-ready architecture. Extend the pipeline, swap models, and self-host without black boxes — a transparent open-source image-to-3D model workflow.",
+    img: "/images/feature-local.png",
+    alt: "An open, hackable local 3D model AI pipeline",
+  },
 ];
 
 export default function FeaturesPage() {
@@ -55,8 +61,9 @@ export default function FeaturesPage() {
           Modly3D Features
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-ink/70">
-          A free, local AI 3D model generator built for creators who want
-          unlimited, offline generation with low hardware requirements.
+          A free, local AI 3D model generator and the best local 3D model AI for
+          creators who want unlimited, offline generation with low hardware
+          requirements. Includes an open-source image-to-3D model pipeline.
         </p>
       </header>
 

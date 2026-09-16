@@ -33,4 +33,16 @@ export const faqs: Faq[] = [
     q: "Which platforms are supported?",
     a: "Modly3D provides installers for Windows, Linux, and macOS. Download the build that matches your operating system from the download section.",
   },
+  {
+    q: "Is Modly3D an open-source image-to-3D model tool?",
+    a: "Yes. Modly3D is an open-source image-to-3D model tool. The pipeline runs locally on your PC with open weights, so you can feed a single image and get a textured 3D mesh with white wireframe edges — no cloud, no credits, fully transparent and hackable.",
+  },
+  {
+    q: "What is the best local 3D model AI?",
+    a: "For offline, unlimited, free generation, the best local 3D model AI is one that runs entirely on your own hardware. Modly3D is a free local AI 3D model generator that turns images and text into 3D meshes on your PC with no subscription and no per-image billing.",
+  },
+  {
+    q: "Is there an open-source 3D AI I can run offline?",
+    a: "Yes. Modly3D is an open-source 3D AI you can run offline. After install, all image-to-3D and text-to-3D generation happens on your machine, so your assets never leave your device and you get unlimited generations.",
+  },
 ];

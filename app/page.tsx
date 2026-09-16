@@ -102,13 +102,14 @@ export default function Home() {
               ))}
             </div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
-              Free Local 3D Model Generator —{" "}
-              <span className="text-gradient">Unlimited, Offline, Low Hardware</span>
+              Modly3D —{" "}
+              <span className="text-gradient">Free Local 3D Model Generator</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-ink/70">
               Modly3D turns any image or text prompt into a detailed 3D mesh
-              right on your computer. No cloud, no credits, no expensive GPU.
-              100% free and unlimited.
+              right on your computer — unlimited, offline, and built for low
+              hardware. No cloud, no credits, 100% free. The best local 3D model
+              AI for creators who want an open-source image-to-3D model pipeline.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -179,6 +180,106 @@ export default function Home() {
           Plus image-to-3D, text-to-3D, collections &amp; workspace, and an
           open model marketplace. <Link href="/features" className="font-semibold text-brand hover:underline">See all features →</Link>
         </p>
+      </section>
+
+      {/* User showcase / demo cases */}
+      <section id="use-cases" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          User showcase: from a game image to a 3D mesh
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-ink/70">
+          Drop in any image — a screenshot, a game asset, a photo — and Modly3D
+          reconstructs it as a clean 3D wireframe mesh with crisp white edges,
+          right on your PC. Here are real example workflows.
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <figure className="overflow-hidden rounded-2xl border border-cloud bg-white/70 shadow-sm">
+            <img
+              src="/images/demo-pet-dog.png"
+              alt="A game pet dog photo turned into a 3D wireframe mesh with white edges in Modly3D"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <figcaption className="p-5">
+              <h3 className="text-base font-semibold text-ink">Game pet → 3D mesh</h3>
+              <p className="mt-1 text-sm text-ink/70">
+                A cartoon pet dog from a game becomes a textured 3D model with a
+                white wireframe overlay, ready to animate.
+              </p>
+            </figcaption>
+          </figure>
+          <figure className="overflow-hidden rounded-2xl border border-cloud bg-white/70 shadow-sm">
+            <img
+              src="/images/demo-hero.png"
+              alt="A game hero character reference turned into a 3D wireframe mesh with white edges in Modly3D"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <figcaption className="p-5">
+              <h3 className="text-base font-semibold text-ink">Game hero → 3D mesh</h3>
+              <p className="mt-1 text-sm text-ink/70">
+                A hero character reference turns into an editable 3D mesh, perfect
+                for rigging and game pipelines.
+              </p>
+            </figcaption>
+          </figure>
+          <figure className="overflow-hidden rounded-2xl border border-cloud bg-white/70 shadow-sm">
+            <img
+              src="/images/demo-sword.png"
+              alt="A fantasy game sword asset turned into a 3D wireframe mesh with white edges in Modly3D"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <figcaption className="p-5">
+              <h3 className="text-base font-semibold text-ink">Game prop → 3D mesh</h3>
+              <p className="mt-1 text-sm text-ink/70">
+                A fantasy sword asset becomes a clean 3D model you can export
+                straight into your engine.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* Long-tail SEO section: best local 3D model AI + open source */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <div className="rounded-3xl border border-cloud bg-white/70 p-8">
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            The best local 3D model AI — open source and free
+          </h2>
+          <p className="mt-4 text-ink/70">
+            Modly3D is built to be the best local 3D model AI for creators who
+            want offline generation without a monthly bill. Unlike cloud tools, it
+            runs an open-source 3D AI entirely on your machine, so your assets
+            never leave your PC and you get unlimited generations.
+          </p>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <h3 className="text-lg font-semibold text-brand-600">
+                Open-source image-to-3D model
+              </h3>
+              <p className="mt-2 text-sm text-ink/70">
+                Feed a single image into an open-source image-to-3D model pipeline
+                and get a textured mesh with white wireframe edges in seconds.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-brand-600">
+                Best local 3D model AI, no cloud
+              </h3>
+              <p className="mt-2 text-sm text-ink/70">
+                All inference runs locally. No API keys, no queues, no per-image
+                credits — just your hardware doing the work.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-brand-600">
+                Open weights, fully hackable
+              </h3>
+              <p className="mt-2 text-sm text-ink/70">
+                As an open-source 3D AI, Modly3D ships open weights and a
+                plugin-ready architecture you can extend.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* How it works */}
