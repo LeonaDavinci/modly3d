@@ -3,7 +3,7 @@ import Link from "next/link";
 import JsonLd from "./components/JsonLd";
 import Faq from "./components/Faq";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://modly3d.example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -19,7 +19,7 @@ const appLd = {
   description:
     "Modly3D is a free local AI 3D model generator that turns images or text into 3D meshes offline with unlimited generations and low hardware requirements.",
   url: siteUrl,
-  image: `${siteUrl}/images/hero.png`,
+  image: `${siteUrl}/images/demo-hero.png`,
 };
 
 const values = [
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <img
-              src="/images/hero.png"
+              src="/images/demo-hero.png"
               alt="Modly3D generating a 3D model from a photo on a laptop"
               className="w-full rounded-3xl shadow-xl ring-1 ring-cloud"
             />
@@ -209,7 +209,7 @@ export default function Home() {
           </figure>
           <figure className="overflow-hidden rounded-2xl border border-cloud bg-white/70 shadow-sm">
             <img
-              src="/images/demo-hero.png"
+              src="/images/hero.png"
               alt="A game hero character reference turned into a 3D wireframe mesh with white edges in Modly3D"
               className="aspect-[4/3] w-full object-cover"
             />

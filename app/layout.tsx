@@ -10,7 +10,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://modly3d.example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/images/hero.png",
+        url: "/images/demo-hero.png",
         width: 1536,
         height: 1024,
         alt: "Modly3D turns a photo into a 3D model on your PC",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Modly3D — Free Local 3D Model Generator",
     description:
       "Free, offline AI 3D model generation. Unlimited, low hardware. Export GLB/OBJ/STL/PLY.",
-    images: ["/images/hero.png"],
+    images: ["/images/demo-hero.png"],
   },
   robots: { index: true, follow: true },
   icons: { icon: "/images/favicon.png", apple: "/images/favicon.png" },
