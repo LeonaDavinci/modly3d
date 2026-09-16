@@ -42,7 +42,7 @@ export default function Footer() {
               <h3 className="font-semibold text-ink">Resources</h3>
               <ul className="mt-2 space-y-1 text-ink/60">
                 <li>
-                  <Link href="/#download" className="transition-colors hover:text-brand">
+                  <Link href="/download" className="transition-colors hover:text-brand">
                     Download
                   </Link>
                 </li>

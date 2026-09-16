@@ -28,7 +28,7 @@ export default function Header() {
           ))}
         </nav>
         <Link
-          href="/#download"
+          href="/download"
           className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
         >
           Download Free

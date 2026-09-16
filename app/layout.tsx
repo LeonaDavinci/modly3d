@@ -15,8 +15,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Modly3D — Free Local 3D Model Generator | Unlimited, Offline, Low Hardware",
-    template: "%s | Modly3D",
+    default: "Modly 3D — Free Local 3D Model Generator | Unlimited, Offline, Low Hardware",
+    template: "%s | Modly 3D",
   },
   description:
     "Modly3D is a free, open-source local AI 3D model generator — the best local 3D model AI for turning images or text into 3D meshes offline with unlimited generations and low hardware. Open-source image-to-3D model pipeline. Export GLB, OBJ, STL, PLY.",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Modly3D",
-    title: "Modly3D — Free Local 3D Model Generator",
+    title: "Modly 3D — Free Local 3D Model Generator",
     description:
       "Free, offline AI 3D model generation. Unlimited generations, low hardware requirements. Export GLB, OBJ, STL, PLY.",
     url: siteUrl,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Modly3D — Free Local 3D Model Generator",
+    title: "Modly 3D — Free Local 3D Model Generator",
     description:
       "Free, offline AI 3D model generation. Unlimited, low hardware. Export GLB/OBJ/STL/PLY.",
     images: ["/images/demo-hero.png"],
