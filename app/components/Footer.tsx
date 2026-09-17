@@ -42,9 +42,14 @@ export default function Footer() {
               <h3 className="font-semibold text-ink">Resources</h3>
               <ul className="mt-2 space-y-1 text-ink/60">
                 <li>
-                  <Link href="/download" className="transition-colors hover:text-brand">
-                    Download
-                  </Link>
+                  <a
+                  href="https://github.com/lightningpixel/modly/releases/latest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-brand"
+                >
+                  Download
+                </a>
                 </li>
                 <li>
                   <Link href="/#extensions" className="transition-colors hover:text-brand">

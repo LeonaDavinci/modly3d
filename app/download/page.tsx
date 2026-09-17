@@ -3,18 +3,20 @@ import Link from "next/link";
 import JsonLd from "../components/JsonLd";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
-const version = "1.0.0";
+const latestRelease = "https://github.com/lightningpixel/modly/releases/latest";
+const allReleases = "https://github.com/lightningpixel/modly/releases";
 
 export const metadata: Metadata = {
-  title: "Modly 3D — Download for Windows & Mac",
+  title: "Modly 3D — Download for Windows, macOS & Linux",
   description:
-    "Download Modly 3D, the free local AI 3D model generator. Get the Windows and macOS installers and turn images or text into 3D meshes offline. Unlimited, no GPU required, a true 3d model local generator.",
+    "Download Modly 3D, the free local AI 3D model generator. Get installers for Windows, macOS (Apple Silicon M-series and Intel), and Linux. Turn images or text into 3D meshes offline — unlimited, no GPU required.",
   keywords: [
     "modly",
     "modly3d",
     "download modly 3d",
     "modly 3d for windows",
     "modly 3d for mac",
+    "modly 3d for linux",
     "local 3d model ai download",
     "free 3d model generator download",
     "3d model local generator",
@@ -27,12 +29,29 @@ const appLd = {
   "@type": "SoftwareApplication",
   name: "Modly3D",
   applicationCategory: "MultimediaApplication",
-  operatingSystem: "Windows, macOS",
-  softwareVersion: version,
+  operatingSystem: "Windows, macOS, Linux",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  downloadUrl: `${siteUrl}/downloads/Modly3D-${version}-Windows.exe`,
+  downloadUrl: latestRelease,
   url: `${siteUrl}/download`,
 };
+
+const platforms = [
+  {
+    name: "Windows",
+    meta: "Windows 10 / 11 (64-bit) · .exe",
+    cta: "Download for Windows",
+  },
+  {
+    name: "macOS",
+    meta: "macOS 11+ · Apple Silicon (M-series) & Intel · .dmg",
+    cta: "Download for macOS",
+  },
+  {
+    name: "Linux",
+    meta: "Ubuntu 20.04+ / Fedora / Arch · .AppImage / .deb",
+    cta: "Download for Linux",
+  },
+];
 
 export default function DownloadPage() {
   return (
@@ -48,53 +67,37 @@ export default function DownloadPage() {
           Download <span className="text-gradient">Modly 3D</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-ink/70">
-          The free, local AI 3D model generator. Grab the installer for your system and start
-          turning images or text into 3D meshes offline — unlimited generations, no GPU, no cloud.
-          Modly runs entirely on your PC, so your work stays private.
+          The free, local AI 3D model generator. Grab the installer for your system and start turning
+          images or text into 3D meshes offline — unlimited generations, no GPU, no cloud. Modly
+          runs entirely on your PC, so your work stays private.
         </p>
       </section>
 
       {/* Primary download cards */}
-      <section className="mt-12 grid gap-6 md:grid-cols-2">
-        <div className="rounded-3xl border border-cloud bg-white p-8 shadow-sm">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-ink">Windows</h2>
-            <span className="rounded-full bg-cloud px-3 py-1 text-xs font-medium text-ink/60">
-              v{version}
-            </span>
-          </div>
-          <p className="mt-2 text-sm text-ink/60">Windows 10 / 11 (64-bit) · .exe installer</p>
-          <a
-            href={`/downloads/Modly3D-${version}-Windows.exe`}
-            download
-            className="mt-6 block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
+      <section className="mt-12 grid gap-6 md:grid-cols-3">
+        {platforms.map((p) => (
+          <div
+            key={p.name}
+            className="flex flex-col rounded-3xl border border-cloud bg-white p-8 shadow-sm"
           >
-            Download for Windows
-          </a>
-        </div>
-
-        <div className="rounded-3xl border border-cloud bg-white p-8 shadow-sm">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-ink">macOS</h2>
-            <span className="rounded-full bg-cloud px-3 py-1 text-xs font-medium text-ink/60">
-              v{version}
-            </span>
+            <h2 className="text-2xl font-bold text-ink">{p.name}</h2>
+            <p className="mt-2 flex-1 text-sm text-ink/60">{p.meta}</p>
+            <a
+              href={latestRelease}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
+            >
+              {p.cta}
+            </a>
           </div>
-          <p className="mt-2 text-sm text-ink/60">macOS 11+ (Apple Silicon &amp; Intel) · .dmg installer</p>
-          <a
-            href={`/downloads/Modly3D-${version}-macOS.dmg`}
-            download
-            className="mt-6 block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
-          >
-            Download for macOS
-          </a>
-        </div>
+        ))}
       </section>
 
       {/* All versions */}
       <div className="mt-6 text-center">
         <a
-          href="https://github.com/LeonaDavinci/modly3d/releases"
+          href={allReleases}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-full border border-cloud px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
@@ -102,7 +105,7 @@ export default function DownloadPage() {
           View all versions on GitHub Releases
         </a>
         <p className="mt-3 text-xs text-ink/50">
-          Linux builds and portable editions are published on GitHub Releases.
+          Each release bundles Windows, macOS (Apple Silicon &amp; Intel), and Linux builds.
         </p>
       </div>
 
@@ -116,8 +119,12 @@ export default function DownloadPage() {
               500 MB disk.
             </li>
             <li>
-              <span className="font-semibold text-ink">macOS:</span> 11 Big Sur or newer, Apple
-              Silicon or Intel, 4 GB RAM.
+              <span className="font-semibold text-ink">macOS:</span> 11 Big Sur or newer. Optimized
+              for Apple Silicon M-series; Intel Macs also supported, 4 GB RAM.
+            </li>
+            <li>
+              <span className="font-semibold text-ink">Linux:</span> Ubuntu 20.04+, Fedora, or Arch;
+              4 GB RAM, 500 MB disk.
             </li>
             <li>
               <span className="font-semibold text-ink">No GPU required:</span> runs on integrated

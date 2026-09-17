@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "./components/JsonLd";
 import Faq from "./components/Faq";
+import ModelViewer from "./components/ModelViewer";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
+const latestRelease = "https://github.com/lightningpixel/modly/releases/latest";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -16,10 +18,27 @@ const appLd = {
   applicationCategory: "MultimediaApplication",
   operatingSystem: "Windows, Linux, macOS",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  downloadUrl: latestRelease,
   description:
     "Modly3D is a free local AI 3D model generator that turns images or text into 3D meshes offline with unlimited generations and low hardware requirements.",
   url: siteUrl,
   image: `${siteUrl}/images/demo-hero.png`,
+};
+
+// Structured data for the interactive sample asset, so the mesh itself is
+// indexable and machine-readable.
+const modelLd = {
+  "@context": "https://schema.org",
+  "@type": "3DModel",
+  name: "Modly3D sample low-poly game pet dog",
+  description:
+    "A 1,950 triangle low-poly game pet dog rendered in the Modly3D in-app 3D viewer. Use it to inspect the mesh, switch to a white wireframe, and check topology before exporting.",
+  encodingFormat: "model/gltf-binary",
+  contentUrl: `${siteUrl}/models/dog.glb`,
+  thumbnailUrl: `${siteUrl}/images/demo-pet-dog.png`,
+  isAccessibleForFree: true,
+  license: "https://creativecommons.org/publicdomain/zero/1.0/",
+  creator: { "@type": "Organization", name: "Quaternius" },
 };
 
 const values = [
@@ -86,6 +105,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={appLd} />
+      <JsonLd data={modelLd} />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
@@ -112,12 +132,14 @@ export default function Home() {
               AI for creators who want an open-source image-to-3D model pipeline.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/#download"
+              <a
+                href={latestRelease}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
               >
                 Download Free
-              </Link>
+              </a>
               <Link
                 href="/how-it-works"
                 className="rounded-full border border-cloud bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
@@ -240,6 +262,36 @@ export default function Home() {
             </figcaption>
           </figure>
         </div>
+      </section>
+
+      {/* Live Three.js mesh preview */}
+      <section id="preview" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
+          Inspect the mesh in 3D, right in your browser
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-ink/70">
+          This is the same viewer Modly3D opens after a local generation. Load a pet
+          image, get a low-poly mesh back, then orbit it, flip on a white wireframe to
+          check topology, and export it as GLB, OBJ, STL or PLY. Every step runs on
+          your own machine — a true 3d model local generator never uploads your
+          assets to a cloud queue.
+        </p>
+        <div className="mt-8">
+          <ModelViewer
+            src="/models/dog.glb"
+            fileName="pet-dog.glb"
+            inputImage="/images/demo-pet-dog.png"
+            inputAlt="Modly3D input image: a cartoon game pet dog reference before local 3D generation"
+            inputFormat="png"
+            fallbackImage="/images/demo-pet-dog.png"
+            fallbackAlt="Modly3D loading a low-poly game pet dog mesh in the browser 3D viewer"
+          />
+        </div>
+        <p className="mt-4 text-center text-sm text-ink/60">
+          Sample asset: a CC0 low-poly game pet dog — 1,950 triangles, 274 KB, rendered
+          live in the Modly3D viewer. Drag to orbit, scroll to zoom, and press Mesh for
+          the wireframe.
+        </p>
       </section>
 
       {/* Long-tail SEO section: best local 3D model AI + open source */}
@@ -405,7 +457,9 @@ export default function Home() {
             {["Windows", "Linux", "macOS"].map((p) => (
               <a
                 key={p}
-                href="#"
+                href={latestRelease}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-600 shadow-sm transition-transform hover:-translate-y-0.5"
               >
                 Download for {p}

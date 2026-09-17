@@ -27,12 +27,14 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/download"
+        <a
+          href="https://github.com/lightningpixel/modly/releases/latest"
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
         >
           Download Free
-        </Link>
+        </a>
       </div>
     </header>
   );
