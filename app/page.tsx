@@ -280,11 +280,11 @@ export default function Home() {
           <ModelViewer
             src="/models/dog.glb"
             fileName="pet-dog.glb"
-            inputImage="/images/demo-pet-dog.png"
-            inputAlt="Modly3D input image: a cartoon game pet dog reference before local 3D generation"
+            inputImage="/images/inpute-yellow-dog.png"
+            inputAlt="Modly3D input image: a low-poly yellow game pet dog reference before local 3D generation"
             inputFormat="png"
-            fallbackImage="/images/demo-pet-dog.png"
-            fallbackAlt="Modly3D loading a low-poly game pet dog mesh in the browser 3D viewer"
+            fallbackImage="/images/inpute-yellow-dog.png"
+            fallbackAlt="Modly3D low-poly yellow game pet dog mesh preview"
           />
         </div>
         <p className="mt-4 text-center text-sm text-ink/60">

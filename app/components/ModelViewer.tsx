@@ -43,7 +43,7 @@ const DEFAULT_FLAGS: ViewerFlags = {
 /** Longest side of the mesh once normalised, in world units. */
 const MODEL_SPAN = 1;
 /** Camera distance from the model centre, in world units. */
-const CAMERA_DISTANCE = 2.2;
+const CAMERA_DISTANCE = 1.95;
 /** Vertical camera angle, in radians above the horizon. */
 const CAMERA_PITCH = 0.26;
 /** Horizontal camera angle, in radians. */
