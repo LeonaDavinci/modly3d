@@ -122,11 +122,13 @@ export default function Home() {
               ))}
             </div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
-              Modly3D —{" "}
-              <span className="text-gradient">Free Local 3D Model Generator</span>
+              <span className="block text-brand">Modly</span>
+              <span className="block">
+                3D <span className="text-gradient">— Free Local 3D Model Generator</span>
+              </span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-ink/70">
-              Modly3D turns any image or text prompt into a detailed 3D mesh
+              Modly turns any image or text prompt into a detailed 3D mesh
               right on your computer — unlimited, offline, and built for low
               hardware. No cloud, no credits, 100% free. The best local 3D model
               AI for creators who want an open-source image-to-3D model pipeline.
@@ -165,7 +167,7 @@ export default function Home() {
       {/* Value props */}
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Why creators choose Modly3D
+          Why creators choose Modly 3D
         </h2>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
@@ -448,7 +450,7 @@ export default function Home() {
       {/* Download */}
       <section id="download" className="mx-auto max-w-6xl px-4 py-12">
         <div className="rounded-3xl bg-gradient-to-br from-brand to-sun p-10 text-center text-white shadow-lg">
-          <h2 className="text-3xl font-extrabold">Download Modly3D — 100% Free</h2>
+          <h2 className="text-3xl font-extrabold">Download Modly 3D — 100% Free</h2>
           <p className="mt-3 text-white/90">
             Local, unlimited, offline 3D generation. Pick your platform and start
             creating.

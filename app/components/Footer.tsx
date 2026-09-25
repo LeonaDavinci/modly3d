@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <img src="/images/logo.png" alt="Modly3D" className="h-8 w-8" />
+              <img src="/images/logo.png" alt="Modly 3D" className="h-8 w-8" />
               <span className="text-base font-bold text-ink">
-                Modly<span className="text-brand">3D</span>
+                Modly <span className="text-brand">3D</span>
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm text-ink/60">
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-8 text-xs text-ink/50">
-          © 2026 Modly3D. Free for everyone. Modly3D is an independent project.
+          © 2026 Modly 3D. Free for everyone. Modly 3D is an independent project.
         </p>
       </div>
     </footer>
