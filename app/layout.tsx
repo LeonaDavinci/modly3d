@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import JsonLd from "./components/JsonLd";
+
+const GA_ID = "G-0RP8Y09NZ2";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +92,17 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+
+        {/* Google tag (gtag.js) */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
