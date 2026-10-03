@@ -37,17 +37,17 @@ const appLd = {
 
 const platforms = [
   {
-    name: "Windows",
+    name: "Modly 3D for Windows",
     meta: "Windows 10 / 11 (64-bit) · .exe",
     cta: "Download for Windows",
   },
   {
-    name: "macOS",
+    name: "Modly 3D for macOS",
     meta: "macOS 11+ · Apple Silicon (M-series) & Intel · .dmg",
     cta: "Download for macOS",
   },
   {
-    name: "Linux",
+    name: "Modly 3D for Linux",
     meta: "Ubuntu 20.04+ / Fedora / Arch · .AppImage / .deb",
     cta: "Download for Linux",
   },
@@ -112,7 +112,7 @@ export default function DownloadPage() {
       {/* System requirements */}
       <section className="mt-16 grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl border border-cloud bg-cloud/30 p-8">
-          <h2 className="text-xl font-bold text-ink">System requirements</h2>
+          <h2 className="text-xl font-bold text-ink">Modly 3D system requirements</h2>
           <ul className="mt-4 space-y-2 text-sm text-ink/70">
             <li>
               <span className="font-semibold text-ink">Windows:</span> 10 / 11, 64-bit, 4 GB RAM,
@@ -139,7 +139,7 @@ export default function DownloadPage() {
 
         {/* Install steps */}
         <div className="rounded-3xl border border-cloud bg-cloud/30 p-8">
-          <h2 className="text-xl font-bold text-ink">Install in three steps</h2>
+          <h2 className="text-xl font-bold text-ink">Install Modly 3D in three steps</h2>
           <ol className="mt-4 space-y-3 text-sm text-ink/70">
             <li>
               <span className="font-semibold text-brand">1.</span> Download the installer for your
@@ -159,7 +159,7 @@ export default function DownloadPage() {
 
       {/* Bottom CTA */}
       <section className="mt-16 rounded-3xl bg-brand/5 p-10 text-center">
-        <h2 className="text-2xl font-bold text-ink">Ready to make 3D models locally?</h2>
+        <h2 className="text-2xl font-bold text-ink">Ready to make 3D models locally with Modly 3D?</h2>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">
           Modly is free forever, works offline, and needs no expensive hardware. See what it can do
           before you install.

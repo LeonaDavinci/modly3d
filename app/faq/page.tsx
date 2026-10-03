@@ -26,7 +26,7 @@ export default function FaqPage() {
       <JsonLd data={faqLd} />
       <header className="text-center">
         <h1 className="text-4xl font-extrabold tracking-tight text-ink">
-          Frequently asked questions
+          Frequently asked questions about Modly 3D
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-lg text-ink/70">
           Everything you need to know about Modly3D before you download.

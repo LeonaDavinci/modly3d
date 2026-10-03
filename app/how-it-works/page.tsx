@@ -11,24 +11,24 @@ export const metadata: Metadata = {
 const steps = [
   {
     n: "01",
-    title: "Import an image or prompt",
+    title: "Import an image or prompt into Modly 3D",
     body: "Drop in a photo of an object, character, or concept — or describe it with a text prompt. A clean input gives the best results.",
     img: "/images/feature-local.png",
-    alt: "Importing an image or prompt into Modly3D",
+    alt: "Modly 3D importing an image or prompt before local 3D generation",
   },
   {
     n: "02",
-    title: "Pick a local model",
+    title: "Pick a Modly 3D local model",
     body: "Choose a built-in model tuned for speed or fidelity. Every model runs locally and is optimized for low hardware.",
     img: "/images/feature-privacy.png",
-    alt: "Selecting a local Modly3D model that runs on your PC",
+    alt: "Modly 3D local model selection that runs on your PC",
   },
   {
     n: "03",
-    title: "Generate & export",
+    title: "Generate & export your Modly 3D mesh",
     body: "Modly3D produces a textured mesh on your PC. Preview it in the built-in viewer, then export as GLB, OBJ, STL, or PLY.",
     img: "/images/feature-export.png",
-    alt: "Modly3D generating and exporting a 3D model",
+    alt: "Modly 3D generating and exporting a 3D model",
   },
 ];
 
