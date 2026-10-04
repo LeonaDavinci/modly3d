@@ -47,12 +47,12 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#extensions" className="transition-colors hover:text-brand">
+                  <Link href="/marketplace" className="transition-colors hover:text-brand">
                     Model marketplace
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#roadmap" className="transition-colors hover:text-brand">
+                  <Link href="/roadmap" className="transition-colors hover:text-brand">
                     Roadmap
                   </Link>
                 </li>

@@ -394,11 +394,20 @@ export default function Home() {
               black boxes.
             </p>
             <Link
-              href="/features"
+              href="/marketplace"
               className="mt-5 inline-block rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
             >
               Explore models
             </Link>
+            <p className="mt-4 text-sm text-ink/70">
+              Prefer to see what is coming?{" "}
+              <Link
+                href="/roadmap"
+                className="font-semibold text-brand hover:underline"
+              >
+                Read the Modly 3D roadmap →
+              </Link>
+            </p>
           </div>
           <ul className="space-y-3 text-sm text-ink/70">
             {[
@@ -421,6 +430,15 @@ export default function Home() {
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
           What&apos;s coming next for Modly 3D
         </h2>
+        <p className="mt-3 text-center text-sm text-ink/70">
+          Looking for models you can install today?{" "}
+          <Link
+            href="/marketplace"
+            className="font-semibold text-brand hover:underline"
+          >
+            Browse the Modly 3D model marketplace →
+          </Link>
+        </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
             "Natural-language mesh editing",
