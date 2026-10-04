@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How it works",
   description:
-    "How Modly3D works: import an image or prompt, pick a local model, and generate a textured 3D mesh on your PC — free, offline, and with low hardware requirements.",
+    "How Modly 3D works: import an image or prompt, pick a local model, then export a 3D mesh — all offline, on your own PC.",
   alternates: { canonical: "/how-it-works" },
 };
 

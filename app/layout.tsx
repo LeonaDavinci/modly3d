@@ -18,11 +18,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Modly 3D — Free Local 3D Model Generator | Unlimited, Offline, Low Hardware",
+    default: "Modly 3D — Free Local 3D Model Generator",
     template: "%s | Modly 3D",
   },
   description:
-    "Modly3D is a free, open-source local AI 3D model generator — the best local 3D model AI for turning images or text into 3D meshes offline with unlimited generations and low hardware. Open-source image-to-3D model pipeline. Export GLB, OBJ, STL, PLY.",
+    "Modly 3D: free offline AI 3D model generator. Turn images or text into 3D meshes on your PC — unlimited generations, low hardware. Export GLB, OBJ, STL, PLY.",
   keywords: [
     "modly",
     "modly3d",

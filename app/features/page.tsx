@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Modly3D features: free local AI 3D generation, image-to-3D, text-to-3D, offline privacy, low hardware requirements, multi-format export, collections, and an open model marketplace.",
+    "Modly 3D features: free local AI 3D generation, image-to-3D, text-to-3D, offline privacy, multi-format export (GLB, OBJ, STL, PLY) and collections.",
   alternates: { canonical: "/features" },
 };
 

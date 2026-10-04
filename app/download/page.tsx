@@ -9,7 +9,7 @@ const allReleases = "https://github.com/lightningpixel/modly/releases";
 export const metadata: Metadata = {
   title: "Modly 3D — Download for Windows, macOS & Linux",
   description:
-    "Download Modly 3D, the free local AI 3D model generator. Get installers for Windows, macOS (Apple Silicon M-series and Intel), and Linux. Turn images or text into 3D meshes offline — unlimited, no GPU required.",
+    "Download Modly 3D for Windows, macOS and Linux — a free local AI 3D model generator. Turn images or text into 3D meshes offline, unlimited.",
   keywords: [
     "modly",
     "modly3d",

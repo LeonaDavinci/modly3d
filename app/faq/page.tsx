@@ -6,7 +6,7 @@ import { faqs } from "@/lib/faqs";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about Modly3D: what a 3d model local generator is, whether it is free, how it works offline, hardware requirements, export formats, and privacy.",
+    "Modly 3D FAQ: how the offline 3D model generator works, what it costs, hardware requirements, export formats and data privacy.",
   alternates: { canonical: "/faq" },
 };
 
