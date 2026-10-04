@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // absolute so the root title keeps the "| Modly" suffix without the
   // layout template being applied twice.
   title: {
-    absolute: "Modly 3D — Free Local 3D Model Generator | Modly",
+    absolute: "Modly - Local AI 3D Model Generator for Free",
   },
   alternates: { canonical: "/" },
 };
@@ -127,9 +127,8 @@ export default function Home() {
               ))}
             </div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
-              <span className="block text-brand">Modly</span>
-              <span className="block">
-                3D <span className="text-gradient">— Free Local 3D Model Generator</span>
+              <span className="block text-brand">
+                Modly <span className="text-gradient">— Free Local AI 3D Model Generator</span>
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-ink/70">

@@ -18,7 +18,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Modly 3D — Free Local 3D Model Generator",
+    default: "Modly - Local AI 3D Model Generator for Free",
     template: "%s | Modly",
   },
   description:
