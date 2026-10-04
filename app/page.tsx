@@ -169,7 +169,7 @@ export default function Home() {
       {/* Value props */}
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Why creators choose Modly 3D
+          Why creators choose Modly
         </h2>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
@@ -187,7 +187,7 @@ export default function Home() {
       {/* Feature spotlights */}
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Everything you need for local AI 3D generation with Modly 3D
+          Everything you need for local AI 3D generation with Modly
         </h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {spotlights.map((s) => (
@@ -212,7 +212,7 @@ export default function Home() {
       {/* User showcase / demo cases */}
       <section id="use-cases" className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Modly 3D showcase: from a game image to a 3D mesh
+          Modly showcase: from a game image to a 3D mesh
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-ink/70">
           Drop in any image — a screenshot, a game asset, a photo — and Modly3D
@@ -271,7 +271,7 @@ export default function Home() {
       {/* Live Three.js mesh preview */}
       <section id="preview" className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Inspect the Modly 3D mesh in your browser
+          Inspect the Modly mesh in your browser
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-ink/70">
           This is the same viewer Modly3D opens after a local generation. Load a pet
@@ -345,7 +345,7 @@ export default function Home() {
       {/* How it works */}
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          From image or prompt to Modly 3D mesh in three steps
+          From image or prompt to Modly mesh in three steps
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {steps.map((s) => (
@@ -362,7 +362,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="rounded-3xl border border-cloud bg-cloud/40 p-8 text-center">
           <h2 className="text-2xl font-bold text-ink sm:text-3xl">
-            Modly 3D exports in multiple formats
+            Modly exports in multiple formats
           </h2>
           <p className="mt-3 text-ink/70">
             Ready for any 3D tool or game engine, straight out of the box.
@@ -385,7 +385,7 @@ export default function Home() {
         <div className="grid items-center gap-8 rounded-3xl border border-cloud bg-white/70 p-8 lg:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold text-ink sm:text-3xl">
-              A growing Modly 3D model marketplace
+              A growing Modly model marketplace
             </h2>
             <p className="mt-3 text-ink/70">
               Install community and official models in one click. Swap the model,
@@ -427,7 +427,7 @@ export default function Home() {
       {/* Roadmap teaser */}
       <section id="roadmap" className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          What&apos;s coming next for Modly 3D
+          What&apos;s coming next for Modly
         </h2>
         <p className="mt-3 text-center text-sm text-ink/70">
           Looking for models you can install today?{" "}
@@ -457,7 +457,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="text-center text-2xl font-bold text-ink sm:text-3xl">
-          Frequently asked questions about Modly 3D
+          Frequently asked questions about Modly
         </h2>
         <div className="mt-8">
           <Faq limit={4} />
@@ -470,7 +470,7 @@ export default function Home() {
       {/* Download */}
       <section id="download" className="mx-auto max-w-6xl px-4 py-12">
         <div className="rounded-3xl bg-gradient-to-br from-brand to-sun p-10 text-center text-white shadow-lg">
-          <h2 className="text-3xl font-extrabold">Download Modly 3D — 100% Free</h2>
+          <h2 className="text-3xl font-extrabold">Download Modly — 100% Free</h2>
           <p className="mt-3 text-white/90">
             Local, unlimited, offline 3D generation. Pick your platform and start
             creating.

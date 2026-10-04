@@ -126,7 +126,7 @@ export default function RoadmapPage() {
       {/* Legend + list */}
       <section className="mt-12" aria-labelledby="roadmap-heading">
         <h2 id="roadmap-heading" className="sr-only">
-          Modly 3D roadmap by status
+          Modly roadmap by status
         </h2>
         <ol className="mt-2 space-y-4">
           {roadmap.map((item, i) => (
@@ -189,7 +189,7 @@ export default function RoadmapPage() {
       {/* Bottom CTA */}
       <section className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-ink">
-          Want a feature in Modly 3D?
+          Want a feature in Modly?
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">
           Tell us what slows you down today — the Modly 3D roadmap is shaped by

@@ -119,7 +119,7 @@ export default function MarketplacePage() {
           id="categories-heading"
           className="text-2xl font-bold text-ink sm:text-3xl"
         >
-          What you can install from the Modly 3D marketplace
+          What you can install from the Modly marketplace
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {categories.map((c) => (
@@ -147,7 +147,7 @@ export default function MarketplacePage() {
       {/* Install steps */}
       <section className="mt-16 rounded-3xl border border-cloud bg-cloud/30 p-8">
         <h2 className="text-xl font-bold text-ink">
-          How to install a model from the Modly 3D marketplace
+          How to install a model from the Modly marketplace
         </h2>
         <ol className="mt-4 space-y-3 text-sm text-ink/70">
           <li>
@@ -171,7 +171,7 @@ export default function MarketplacePage() {
           id="publish-heading"
           className="text-2xl font-bold text-ink sm:text-3xl"
         >
-          Publish your own Modly 3D model
+          Publish your own Modly model
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-ink/70">
           Trained something that works well on modest hardware? The Modly 3D

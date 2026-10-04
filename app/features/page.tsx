@@ -87,7 +87,7 @@ export default function FeaturesPage() {
       </div>
 
       <div className="mt-12 rounded-3xl border border-cloud bg-cloud/40 p-8 text-center">
-        <h2 className="text-2xl font-bold text-ink">Open Modly 3D model marketplace</h2>
+        <h2 className="text-2xl font-bold text-ink">Open Modly model marketplace</h2>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">
           Install official and community models in one click, swap the pipeline,
           and extend Modly3D with your own tools. Open weights, no black boxes.

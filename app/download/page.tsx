@@ -170,7 +170,7 @@ export default function DownloadPage() {
           id="platform-heading"
           className="text-center text-2xl font-bold text-ink sm:text-3xl"
         >
-          Modly 3D download links for every system
+          Modly download links for every system
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {platforms.map((p) => (
@@ -225,7 +225,7 @@ export default function DownloadPage() {
           id="requirements-heading"
           className="text-2xl font-bold text-ink sm:text-3xl"
         >
-          Modly 3D system and hardware requirements
+          Modly system and hardware requirements
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-ink/70">
           Modly 3D is built as a low hardware 3d model local generator: no GPU
@@ -286,7 +286,7 @@ export default function DownloadPage() {
       {/* Install steps */}
       <section className="mt-16 rounded-3xl border border-cloud bg-cloud/30 p-8">
         <h2 className="text-xl font-bold text-ink">
-          Install Modly 3D in three steps
+          Install Modly in three steps
         </h2>
         <ol className="mt-4 space-y-3 text-sm text-ink/70">
           <li>
@@ -307,7 +307,7 @@ export default function DownloadPage() {
       {/* Bottom CTA */}
       <section className="mt-16 rounded-3xl bg-brand/5 p-10 text-center">
         <h2 className="text-2xl font-bold text-ink">
-          Ready to make 3D models locally with Modly 3D?
+          Ready to make 3D models locally with Modly?
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">
           Modly is free forever, works offline, and needs no expensive hardware.

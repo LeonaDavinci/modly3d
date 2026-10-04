@@ -321,7 +321,7 @@ export default function ExtensionsPage() {
           id="model-extensions"
           className="text-2xl font-bold text-ink sm:text-3xl"
         >
-          Model extensions for Modly 3D
+          Model extensions for Modly
         </h2>
         <p className="mt-2 text-sm text-ink/70">
           Each one plugs a new generator into Modly, so you can drop in an image
@@ -362,7 +362,7 @@ export default function ExtensionsPage() {
           id="process-extensions"
           className="text-2xl font-bold text-ink sm:text-3xl"
         >
-          Process extensions for Modly 3D
+          Process extensions for Modly
         </h2>
         <p className="mt-2 text-sm text-ink/70">
           Post-generation steps — rigging, cleaning, audio, and external tooling —
@@ -392,7 +392,7 @@ export default function ExtensionsPage() {
       {/* Install steps */}
       <section className="mt-16 rounded-3xl border border-cloud bg-cloud/30 p-8">
         <h2 className="text-xl font-bold text-ink">
-          Install a Modly 3D extension in three steps
+          Install a Modly extension in three steps
         </h2>
         <ol className="mt-4 space-y-3 text-sm text-ink/70">
           <li>
@@ -412,7 +412,7 @@ export default function ExtensionsPage() {
 
       {/* Bottom CTA */}
       <section className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-ink">Ready to extend Modly 3D?</h2>
+        <h2 className="text-2xl font-bold text-ink">Ready to extend Modly?</h2>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">
           Grab the free desktop app, install your first extension, and generate a
           3D model offline — the whole loop stays on your machine.
