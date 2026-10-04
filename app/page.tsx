@@ -303,7 +303,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="rounded-3xl border border-cloud bg-white/70 p-8">
           <h2 className="text-2xl font-bold text-ink sm:text-3xl">
-            Modly 3D: the best local 3D model AI — open source and free
+            Modly: the best local 3D model AI — open source and free
           </h2>
           <p className="mt-4 text-ink/70">
             Modly3D is built to be the best local 3D model AI for creators who
