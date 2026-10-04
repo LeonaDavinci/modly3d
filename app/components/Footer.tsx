@@ -8,9 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <img src="/images/logo.png" alt="Modly 3D" className="h-8 w-8" />
-              <span className="text-base font-bold text-ink">
-                Modly <span className="text-brand">3D</span>
-              </span>
+              <span className="text-base font-bold text-ink">Modly</span>
             </div>
             <p className="mt-3 max-w-xs text-sm text-ink/60">
               Free, local AI 3D model generator. Unlimited generations, offline,
