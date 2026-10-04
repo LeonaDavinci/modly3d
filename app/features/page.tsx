@@ -93,7 +93,7 @@ export default function FeaturesPage() {
           and extend Modly3D with your own tools. Open weights, no black boxes.
         </p>
         <Link
-          href="/#download"
+          href="/download"
           className="mt-5 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
         >
           Download Free

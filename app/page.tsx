@@ -134,14 +134,12 @@ export default function Home() {
               AI for creators who want an open-source image-to-3D model pipeline.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={latestRelease}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/download"
                 className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600"
               >
                 Download Free
-              </a>
+              </Link>
               <Link
                 href="/how-it-works"
                 className="rounded-full border border-cloud bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
@@ -457,15 +455,13 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {["Windows", "Linux", "macOS"].map((p) => (
-              <a
+              <Link
                 key={p}
-                href={latestRelease}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/download"
                 className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-600 shadow-sm transition-transform hover:-translate-y-0.5"
               >
                 Download for {p}
-              </a>
+              </Link>
             ))}
           </div>
           <p className="mt-4 text-xs text-white/80">

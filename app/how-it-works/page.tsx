@@ -67,7 +67,7 @@ export default function HowItWorksPage() {
 
       <div className="mt-12 text-center">
         <Link
-          href="/#download"
+          href="/download"
           className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
         >
           Download Free
