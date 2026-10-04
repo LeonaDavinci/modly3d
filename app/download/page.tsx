@@ -178,7 +178,7 @@ export default function DownloadPage() {
               key={p.id}
               className="flex flex-col rounded-3xl border border-cloud bg-white p-8 shadow-sm"
             >
-              <h3 className="text-2xl font-bold text-ink">Modly 3D for {p.name}</h3>
+              <h3 className="text-2xl font-bold text-ink">Modly for {p.name}</h3>
               <p className="mt-2 text-sm text-ink/60">{p.detail}</p>
               <dl className="mt-4 flex-1 space-y-1 text-sm text-ink/70">
                 <div className="flex justify-between gap-3">

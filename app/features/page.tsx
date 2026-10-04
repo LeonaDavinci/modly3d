@@ -10,43 +10,43 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    title: "Modly 3D Image to 3D",
+    title: "Modly Image to 3D",
     body: "Turn any photo into a detailed, textured 3D mesh. Drop in a product shot, character reference, or concept art and get a ready-to-use model.",
     img: "/images/feature-local.png",
     alt: "Modly 3D generating a 3D mesh from an image on a laptop",
   },
   {
-    title: "Modly 3D Text to 3D",
+    title: "Modly Text to 3D",
     body: "Describe a concept in plain language and Modly3D generates a 3D model locally. Great for rapid ideation and placeholders.",
     img: "/images/feature-export.png",
     alt: "Modly 3D exporting a 3D model into multiple formats",
   },
   {
-    title: "Modly 3D is private by design",
+    title: "Modly is private by design",
     body: "All inference runs on your PC. Your images and prompts are never uploaded, making Modly3D a true 3d model local generator.",
     img: "/images/feature-privacy.png",
     alt: "Modly 3D keeps your data private: a laptop protected by a privacy shield, no data uploaded",
   },
   {
-    title: "Modly 3D low hardware requirements",
+    title: "Modly low hardware requirements",
     body: "Optimized models run on everyday laptops. No GPU farm, no data center — just your machine, fast and free.",
     img: "/images/feature-local.png",
     alt: "Modly 3D local generation on a standard laptop",
   },
   {
-    title: "Modly 3D multiple export formats",
+    title: "Modly multiple export formats",
     body: "Export as GLB, OBJ, STL, and PLY for Blender, Unity, Unreal, Godot, and most 3D printers and slicers.",
     img: "/images/feature-export.png",
     alt: "Modly 3D model exported into GLB, OBJ, STL, PLY formats",
   },
   {
-    title: "Modly 3D collections & workspace",
+    title: "Modly collections & workspace",
     body: "Organize every generation into collections so your models stay accessible and easy to manage.",
     img: "/images/feature-privacy.png",
     alt: "Modly 3D keeps your generations private and organized on your device",
   },
   {
-    title: "Modly 3D is open source & hackable",
+    title: "Modly is open source & hackable",
     body: "Modly3D is an open-source 3D AI with open weights and a plugin-ready architecture. Extend the pipeline, swap models, and self-host without black boxes — a transparent open-source image-to-3D model workflow.",
     img: "/images/feature-local.png",
     alt: "Modly 3D: an open, hackable local 3D model AI pipeline",

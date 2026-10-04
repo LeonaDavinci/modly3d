@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Modly",
   },
   description:
-    "Modly 3D: free offline AI 3D model generator. Turn images or text into 3D meshes on your PC — unlimited generations, low hardware. Export GLB, OBJ, STL, PLY.",
+    "Modly: free offline AI 3D model generator. Turn images or text into 3D meshes on your PC — unlimited generations, low hardware. Export GLB, OBJ, STL, PLY.",
   keywords: [
     "modly",
     "modly3d",

@@ -228,7 +228,7 @@ export default function Home() {
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">
-              <h3 className="text-base font-semibold text-ink">Modly 3D: game pet → 3D mesh</h3>
+              <h3 className="text-base font-semibold text-ink">Modly: game pet → 3D mesh</h3>
               <p className="mt-1 text-sm text-ink/70">
                 A cartoon pet dog from a game becomes a textured 3D model with a
                 white wireframe overlay, ready to animate.
@@ -243,7 +243,7 @@ export default function Home() {
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">
-              <h3 className="text-base font-semibold text-ink">Modly 3D: game hero → 3D mesh</h3>
+              <h3 className="text-base font-semibold text-ink">Modly: game hero → 3D mesh</h3>
               <p className="mt-1 text-sm text-ink/70">
                 A hero character reference turns into an editable 3D mesh, perfect
                 for rigging and game pipelines.
@@ -258,7 +258,7 @@ export default function Home() {
               className="aspect-[4/3] w-full object-cover"
             />
             <figcaption className="p-5">
-              <h3 className="text-base font-semibold text-ink">Modly 3D: game prop → 3D mesh</h3>
+              <h3 className="text-base font-semibold text-ink">Modly: game prop → 3D mesh</h3>
               <p className="mt-1 text-sm text-ink/70">
                 A fantasy sword asset becomes a clean 3D model you can export
                 straight into your engine.
@@ -313,7 +313,7 @@ export default function Home() {
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div>
               <h3 className="text-lg font-semibold text-brand-600">
-                Modly 3D open-source image-to-3D model
+                Modly open-source image-to-3D model
               </h3>
               <p className="mt-2 text-sm text-ink/70">
                 Feed a single image into an open-source image-to-3D model pipeline
@@ -322,7 +322,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-brand-600">
-                Modly 3D is the best local 3D model AI, no cloud
+                Modly is the best local 3D model AI, no cloud
               </h3>
               <p className="mt-2 text-sm text-ink/70">
                 All inference runs locally. No API keys, no queues, no per-image
@@ -331,7 +331,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-brand-600">
-                Modly 3D open weights, fully hackable
+                Modly open weights, fully hackable
               </h3>
               <p className="mt-2 text-sm text-ink/70">
                 As an open-source 3D AI, Modly3D ships open weights and a
