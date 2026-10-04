@@ -48,19 +48,19 @@ const modelLd = {
 
 const values = [
   {
-    title: "Modly 3D is 100% Free Forever",
+    title: "Modly is 100% Free Forever",
     body: "No subscriptions, no per-image credits, no hidden limits. Cloud services charge $20–$60/month — Modly3D is free and always will be.",
   },
   {
-    title: "Modly 3D is Local & Private",
+    title: "Modly is Local & Private",
     body: "Everything runs on your PC. Your images and prompts never leave your device. A true 3d model local generator with zero uploads.",
   },
   {
-    title: "Modly 3D Unlimited Generations",
+    title: "Modly Unlimited Generations",
     body: "Generate as many 3D models as you want. No queues, no rate limits, no credits to top up.",
   },
   {
-    title: "Modly 3D Low Hardware Requirements",
+    title: "Modly Low Hardware Requirements",
     body: "Optimized to run on everyday laptops. No expensive GPU farm, no data center — just your machine.",
   },
 ];
