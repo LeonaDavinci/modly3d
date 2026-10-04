@@ -8,6 +8,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.modly3d.com";
 const latestRelease = "https://github.com/lightningpixel/modly/releases/latest";
 
 export const metadata: Metadata = {
+  // absolute so the root title keeps the "| Modly" suffix without the
+  // layout template being applied twice.
+  title: {
+    absolute: "Modly 3D — Free Local 3D Model Generator | Modly",
+  },
   alternates: { canonical: "/" },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Modly 3D — Free Local 3D Model Generator",
-    template: "%s | Modly 3D",
+    template: "%s | Modly",
   },
   description:
     "Modly 3D: free offline AI 3D model generator. Turn images or text into 3D meshes on your PC — unlimited generations, low hardware. Export GLB, OBJ, STL, PLY.",
