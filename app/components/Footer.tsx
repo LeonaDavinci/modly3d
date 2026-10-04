@@ -59,6 +59,11 @@ export default function Footer() {
                     Roadmap
                   </Link>
                 </li>
+                <li>
+                  <Link href="/docs" className="transition-colors hover:text-brand">
+                    Docs
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
