@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hello everyone ,this is project [Modly](https://www.modly3d.com), a free  local AI 3D model generator for unlimited offline generation.
 
 <img alt="Modly 3D generating a 3D model from a photo on a laptop" title="Modly 3D — free local AI 3D model generator for unlimited offline generation" class="w-full rounded-3xl shadow-xl ring-1 ring-cloud" src="https://www.Modly3d.com/images/demo-hero.png">
 
