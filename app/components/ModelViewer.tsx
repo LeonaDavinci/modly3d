@@ -16,6 +16,10 @@ type ViewerApi = {
 type ViewerMaterial = import("three").Material & {
   wireframe?: boolean;
   color?: import("three").Color;
+  // Not on the Material base class in @types/three — only on the shading
+  // materials (MeshStandardMaterial and friends), which is what GLTFLoader
+  // produces. Declared optional here so the smooth-shading pass can set it.
+  flatShading?: boolean;
 };
 
 export type ModelViewerProps = {
