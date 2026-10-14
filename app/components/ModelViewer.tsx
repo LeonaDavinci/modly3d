@@ -111,6 +111,9 @@ export default function ModelViewer({
         const { RoomEnvironment } = await import(
           "three/examples/jsm/environments/RoomEnvironment.js"
         );
+        const { mergeVertices } = await import(
+          "three/examples/jsm/utils/BufferGeometryUtils.js"
+        );
         if (disposed) return;
 
         setPhase("loading");
@@ -231,6 +234,46 @@ export default function ModelViewer({
         let frame = 0;
         let resizeObserver: ResizeObserver | null = null;
 
+        /**
+         * Renders a mesh in smooth shading. Low-poly and AI-generated assets
+         * ship hard-edged normals (one normal per face), which reads as a
+         * faceted surface. Welding coincident vertices and re-averaging the
+         * normals gives the surface a continuous, rounded falloff instead.
+         */
+        const smoothGeometry = (mesh: import("three").Mesh) => {
+          const source = mesh.geometry;
+          if (!source?.attributes?.position) return;
+
+          // Per-face normals differ on every triangle, which stops the welder
+          // from matching vertices — drop them, merge, then rebuild.
+          const stripped = source.clone();
+          stripped.deleteAttribute("normal");
+
+          let merged: import("three").BufferGeometry | null = null;
+          try {
+            merged = mergeVertices(stripped, 1e-4);
+          } catch {
+            merged = null;
+          }
+
+          const welded =
+            merged !== null &&
+            merged.attributes.position.count < source.attributes.position.count;
+
+          if (welded && merged) {
+            merged.computeVertexNormals();
+            mesh.geometry = merged;
+            stripped.dispose();
+            source.dispose();
+            return;
+          }
+
+          // Already single-welded (or unmergeable) — just re-average in place.
+          merged?.dispose();
+          stripped.dispose();
+          source.computeVertexNormals();
+        };
+
         const loader = new GLTFLoader();
         loader.load(
           src,
@@ -245,6 +288,8 @@ export default function ModelViewer({
               if (!mesh.isMesh) return;
               // Skinned bounds drift while animating; skip culling entirely.
               mesh.frustumCulled = false;
+
+              smoothGeometry(mesh);
 
               const geometry = mesh.geometry;
               if (geometry?.index) total += geometry.index.count / 3;
@@ -274,6 +319,9 @@ export default function ModelViewer({
                   );
                 }
                 standard.envMapIntensity = 1.05;
+                // Smooth shading mode — keep per-face normals off so the
+                // welded, averaged normals above are what actually shades.
+                material.flatShading = false;
                 if (material.wireframe !== undefined) {
                   paintable.push({
                     material,
