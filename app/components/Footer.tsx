@@ -60,6 +60,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/media" className="transition-colors hover:text-brand">
+                    Media coverage
+                  </Link>
+                </li>
+                <li>
                   <Link href="/docs" className="transition-colors hover:text-brand">
                     Docs
                   </Link>
